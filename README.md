@@ -4,7 +4,7 @@
 
 ## Example use case
 
-The function does pre-computation when the system is idle. If the time of each pre-computation evaluation may be sensitive (have timing pattern), we can reduce this pattern by running it to a specific total time.
+In an application, we want to do pre-computation when the system is idle. If the time of each pre-computation evaluation is sensitive (have timing pattern), we can reduce this pattern by padding it to a specific total time.
 
 For example, to boost the online efficiency for ElGamal, you can pre-compute the pair (pk^r, g^r) for randomly sampled r (https://github.com/weikengchen/mod_exp_with_precomputation). However, different r results in different evalution times. It is hard to claim the security with very strong confidence. So we use this wrapper to pad the running time.
 
